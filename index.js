@@ -46,28 +46,3 @@ return Charge
   }
 
 
-
-
-function calculatesFarp(start, destination) {
-    //returns the fare for the customer
-    distanceTravelledInFeet(start, destination)
-    let Charge
-    let ride = distanceTravelledInFeet(start, destination);
-
-     if ( ride<= 400) {
-         Charge = 0;
-      }
-    else if(ride >= 2501){
-      Charge ='cannot travel that far';
-      }
-    else if(ride >= 401 && ride <=2000){
-        Charge = (ride - 400) * 0.02;
-    }
-    else if (ride > 2000 && ride < 2500){
-      Charge = 25;
-    }
-    return Charge            
-
-}
-
-console.log(calculatesFarp(50, 58))
